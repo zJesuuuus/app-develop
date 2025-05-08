@@ -35,7 +35,11 @@ function login(email, password){
             message = 'Inicio de sesión exitoso.';
             console.log('responde bien' + response)
             alertBuilder(alertType, message)
-            localStorage.setItem('token', 'QaXNlmnjgULp02mNjslgDjJK')
+
+            response.json().then((data)=> {
+                localStorage.setItem('token', data.token)
+            })
+            
             setTimeout(() => {
                 location.href = 'admin/dashboard.html'
 

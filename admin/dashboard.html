@@ -28,10 +28,10 @@
                                     <a class="nav-link active text-light" aria-current="page" href="./dashboard.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="#" onclick="getUsers()">Usuarios</a>
+                                    <a class="nav-link text-light" href="#users" onclick="getUsers()">Usuarios</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="#" onclick="getProducts()">Productos</a>
+                                    <a class="nav-link text-light" href="#products" onclick="getProducts()">Productos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-light" href="#" onclick="logout()">Salir</a>
@@ -51,23 +51,15 @@
         <div class="row justify-content-center mt-3">
             <div class="col-6">
                 <div class="card border border-success-subtle font-monospace">
-                    <div class="card-header text-center bg-success text-light">
+                    <div class="card-header text-center bg-success text-light" id="cardHeader">
                         <h4>Bienvenido a la app</h4>
                     </div>
                     <div class="card-body bg-success-subtle">
                         <div id="alert">
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <strong>Bienvenido!</strong> Para continuar completa los campos anteriores.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
+                            
                         </div>
                         <div id="info">
-                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <strong>Bienvenido!</strong> Para continuar completa los campos anteriores.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -85,6 +77,7 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script src="../JavaScript/dashboard.js"></script>
+    
 </body>
 
 </html>

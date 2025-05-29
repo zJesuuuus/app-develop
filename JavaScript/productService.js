@@ -1,5 +1,5 @@
 function getProducts(){
-    document.getElementById('cardHeader').innerHTML = '<h4>Listado de Productos</h4>'
+    document.getElementById('cardHeader').innerHTML = '<h4><i class="fa-solid fa-boxes-stacked"></i> Listado de Productos</h4>'
     document.getElementById('info').innerHTML = '' 
     fetch("https://reqres.in/api/unknown",{
         method: "GET", 
@@ -30,6 +30,7 @@ function getProducts(){
                             <th scope="col">Year</th>
                             <th scope="col">Color</th>
                             <th scope="col">Pantone_Value</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                 <tbody>
@@ -43,7 +44,7 @@ function getProducts(){
                         <td>${product.color}</td>
                         <td>${product.pantone_value}</td>
                         <td>
-                            <button type="button" class="btn btn-outline-success" onclick="showInfoProduct('${product.id}')">View</button>
+                            <button type="button" class="btn btn-outline-success" onclick="showInfoProduct('${product.id}')"><i class="fa-regular fa-eye"></i></button>
                         </td>
                     </tr>
     
@@ -99,17 +100,17 @@ function showModalProduct(product){
             <div class="modal-dialog modal-sm">
             <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Show Product</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-box"></i> Show Product</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Info Products</h5>
-                        <p class="card-text">First Name : ${product.name}</p>
-                        <p class="card-text">Last Name : ${product.year}</p>
-                        <p class="card-text">Email : ${product.color}</p>
-                        <p class="card-text">Email : ${product.pantone_value}</p>
+                        <h5 class="card-title"><i class="fa-solid fa-circle-info"></i> Info Products</h5>
+                        <p class="card-text">Name : ${product.name}</p>
+                        <p class="card-text">Year : ${product.year}</p>
+                        <p class="card-text">Color : ${product.color}</p>
+                        <p class="card-text">Pantone Value : ${product.pantone_value}</p>
                     </div>
                 </div>
             </div>
